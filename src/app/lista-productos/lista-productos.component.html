@@ -1,0 +1,12 @@
+<h1>Lista de la compra:</h1>
+
+<div *ngFor="let producto of productos index as i;">
+    <button  *ngIf="!productos[i].comprado" class="myButton" (click)="onClickMe(i)" >{{productos[i].nombre}}</button>
+</div>
+
+<hr>
+
+<h1>Productos comprados:</h1>
+<div *ngFor="let producto of productos index as i;">
+  <button  *ngIf="productos[i].comprado" class="myButton2" (click)="onClickMe2(i)" >{{productos[i].nombre}}</button>
+</div>
